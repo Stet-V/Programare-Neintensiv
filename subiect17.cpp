@@ -6,28 +6,29 @@ using namespace std;
 ifstream f("atestat.in");
 ofstream g("atestat.out");
 
-void filler(float n){
-    g << n;
+float sum(float A[20][20], int n, int x){
+    float y = 0;
+    for (int i = 1; i <= n; i++)
+        y = y + A[x][i];
+    return y;
 }
 
 int main(){
     int n;
-    float s;
+    float A[20][20], s = 0;
     f >> n;
-    float A[n][n];
     for (int i = 1; i <= n; i++)
         for (int j = 1; j <= n; j++)
             f >> A[i][j];
     for (int i = 1; i <= n; i++){
-        for (int j = 1; j <= n; j++)
+        for (int j = 1; j <= n; j++){
             cout << A[i][j] << " ";
+            if (i == j) s = s + A[i][j];
+        }
         cout << endl;
     }
     cout << s / n << endl;
     int k;
     cin >> k;
-    s = 0;
-    for (int i = 1; i <= n; i++)
-        s = s + A[k][i];
-    filler(s);
+    g << sum(A, n, k);
 }

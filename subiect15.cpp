@@ -6,15 +6,16 @@ using namespace std;
 ifstream f("atestat.in");
 ofstream g("atestat.out");
 
-void filler(int n){
-    if (n == 0) cout << "NU";
-        else cout << "DA";
+int find(int A[20][20], int n, int x){
+    for (int i = 1; i <= n; i++)
+        for (int j = 1; j <= n; j++)
+            if (A[i][j] == x) return 1;
+    return 0;
 }
 
 int main(){
-    int n;
+    int A[20][20], n;
     f >> n;
-    int A[n][n];
     for (int i = 1; i <= n; i++)
         for (int j = 1; j <= n; j++)
             f >> A[i][j];
@@ -33,5 +34,6 @@ int main(){
         }
         g << endl;
     }
-    filler(x);
+    if (find(A, n, k) == 0) cout << "NU";
+        else cout << "DA";
 }

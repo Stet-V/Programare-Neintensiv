@@ -13,11 +13,11 @@ void uppercase(char s[], int i){
 }
 
 int main(){
-    char s[71], c[]="AEIOU";
+    char s[70], c[]="AEIOU";
     int x = 0, y = 0;
-    f.get(s, 71);
+    f.get(s, 70);
     for (int i = 0; i < strlen(s); i++){
-        if ((s[i] == ' ') && (s[i+1] == 'a')) y++;
+        if ((s[i] == ' ') && (s[i + 1] == 'a')) y++;
         uppercase(s, i);
         cout << s[i];  
         for (int j = 0; j < strlen(c); j++)

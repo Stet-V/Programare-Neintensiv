@@ -15,8 +15,8 @@ char lowercase(char c){
 
 int main(){
     int x = 0;
-    char s[71], c[]="aeiouAEIOU";
-    f.get(s, 71);
+    char s[70], c[]="aeiouAEIOU";
+    f.get(s, 70);
     for (int i = 0; i < strlen(s); i++){
         cout << lowercase(s[i]);
         for (int j = 0; j < strlen(c); j++)

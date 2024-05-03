@@ -6,14 +6,15 @@ using namespace std;
 ifstream f("atestat.in");
 ofstream g("atestat.out");
 
-void filler(int n){
-    g << n;
+void minimum(int A[20][20], int n, int x, int &y){
+    for (int i = 1; i <= n; i++)
+        if (A[y][i] < A[y][x])
+            x = i;
 }
 
 int main(){
-    int n, s = 0;
+    int A[20][20], n, s = 0;
     f >> n;
-    int A[n][n];
     for (int i = 1; i <= n; i++)
         for (int j = 1; j <= n; j++)
             f >> A[i][j];
@@ -27,8 +28,6 @@ int main(){
     cout << s << endl;
     int k, x = 1;
     cin >> k;
-    for (int i = 1; i <= n; i++)
-        if (A[k][i] < A[k][x])
-            x = i;
-    filler(A[k][x]);
+    minimum(A, n, k, x);
+    g << A[k][x];
 }

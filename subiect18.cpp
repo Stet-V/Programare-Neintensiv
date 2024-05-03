@@ -13,9 +13,9 @@ void uppercase(char s[], int i){
 }
 
 int main(){
-    char s[71], c[]="BCDFGHJKLMNPQRSTVWXYZ";
+    char s[70], c[]="BCDFGHJKLMNPQRSTVWXYZ";
     int x = 0, y = 1;
-    f.get(s, 71);
+    f.get(s, 70);
     for (int i = 0; i < strlen(s); i++){
         uppercase(s, i);
         cout << s[i];
