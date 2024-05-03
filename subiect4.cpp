@@ -8,9 +8,8 @@ ofstream g("atestat.out");
 
 int evendigits(int n){
     while (n != 0) {
-        if ((n % 10) % 2 != 0) {
+        if ((n % 10) % 2 != 0)
             return 0;
-        }
         n = n / 10;
     }
     return 1;

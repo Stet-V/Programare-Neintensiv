@@ -6,15 +6,9 @@ using namespace std;
 ifstream f("atestat.in");
 ofstream g("atestat.out");
 
-int perfectsquare(int n){
-    int x = 0;
-    while (x * x <= n) {
-        if (x * x == n) {
-            return 1;
-        }
-        x++;
-    }
-    return 0;
+void filler(int n){
+    if (n == 0) cout << "NU";
+        else cout << "DA";
 }
 
 int main(){
@@ -25,9 +19,8 @@ int main(){
         for (int j = 1; j <= n; j++)
             f >> A[i][j];
     for (int i = 1; i <= n; i++){
-        for (int j = 1; j <= n; j++){
+        for (int j = 1; j <= n; j++)
             cout << A[i][j] << " ";
-        }
         cout << endl;
     }
     int k, x = 0;
@@ -40,6 +33,5 @@ int main(){
         }
         g << endl;
     }
-    if (x == 0) cout << "NU";
-        else cout << "DA";
+    filler(x);
 }

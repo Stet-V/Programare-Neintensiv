@@ -9,9 +9,8 @@ ofstream g("atestat.out");
 int perfectsquare(int n){
     int x = 0;
     while (x * x <= n) {
-        if (x * x == n) {
+        if (x * x == n)
             return 1;
-        }
         x++;
     }
     return 0;

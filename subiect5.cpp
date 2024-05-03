@@ -7,7 +7,7 @@ using namespace std;
 ifstream f("atestat.in");
 ofstream g("atestat.out");
 
-void bubble(float A[], int n, int p1, int p2){
+void bubble(float A[], int p1, int p2){
     int x = 1;
     while (x != 0){
         x = 0;
@@ -42,7 +42,7 @@ int main(){
     cout << endl;
     int p1, p2;
     cin >> p1 >> p2;
-    bubble(A, n, p1, p2);
+    bubble(A, p1, p2);
     for (int i = 1; i <= n; i++){
         g << A[i] << " ";
     }

@@ -6,8 +6,8 @@ using namespace std;
 ifstream f("atestat.in");
 ofstream g("atestat.out");
 
-void filler(float s){
-    g << s;
+void filler(float n){
+    g << n;
 }
 
 int main(){

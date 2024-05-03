@@ -8,7 +8,7 @@ ofstream g("atestat.out");
 
 int absolute(int n) {
     if (n >= 0) return n;
-    return -n;
+    return - n;
 }
 
 int divisors(int n){
