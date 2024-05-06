@@ -8,8 +8,8 @@ ofstream g("atestat.out");
 
 void minimum(int A[20][20], int n, int x, int &y){
     for (int i = 1; i <= n; i++)
-        if (A[y][i] < A[y][x])
-            x = i;
+        if (A[x][i] < A[x][y])
+            y = i;
 }
 
 int main(){
