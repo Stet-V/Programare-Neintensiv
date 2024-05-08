@@ -40,7 +40,7 @@ int main(){
     while (x != 0){
         x = 0;
         for (int i = p1; i < p2; i++){
-            if (A[i] > A[i + 1]){
+            if (A[i] < A[i + 1]){
                 int t = A[i];
                 A[i] = A[i + 1];
                 A[i + 1] = t;
