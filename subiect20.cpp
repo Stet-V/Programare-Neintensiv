@@ -14,7 +14,7 @@ char lowercase(char c){
 }
 
 int main(){
-    int x = 0;
+    int x = 1;
     char s[70]:
     f.get(s, 70);
     for (int i = 0; i < strlen(s); i++){
