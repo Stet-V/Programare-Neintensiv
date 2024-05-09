@@ -15,12 +15,11 @@ char lowercase(char c){
 
 int main(){
     int x = 0;
-    char s[70], c[]="aeiouAEIOU";
+    char s[70]:
     f.get(s, 70);
     for (int i = 0; i < strlen(s); i++){
-        cout << lowercase(s[i]);
-        for (int j = 0; j < strlen(c); j++)
-            if (s[i] == c[j]) x++;
+        cout << lowercase(s[i]);
+        if (s[i] == ' ') x++;
     }
     cout << endl << x;
     char ch;
